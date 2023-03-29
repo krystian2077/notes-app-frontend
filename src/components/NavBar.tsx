@@ -4,6 +4,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavBarLoggedInView } from "./NavBarLoggedInView";
 import { NavBarLoggedOutView } from "./NavBarLoggedOutView";
 import { Link } from "react-router-dom";
+import styles from "../styles/Navbar.module.css";
 
 interface NavBarProps {
   loggedInUser?: User | null;
@@ -20,9 +21,9 @@ export const NavBar = ({
 }: NavBarProps) => {
   return (
     <>
-      <Navbar bg="primary" variant="dark" expand="sm" sticky="top">
+      <Navbar bg="success" variant="dark" expand="md" sticky="top">
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={Link} to="/" className={styles.brandFontSize}>
             My Notes App
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="main-navbar" />

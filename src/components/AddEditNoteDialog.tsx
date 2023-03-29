@@ -76,7 +76,12 @@ export const AddEditNoteDialog = ({
         </Modal.Body>
 
         <Modal.Footer>
-          <Button type="submit" form="addEditNoteForm" disabled={isSubmitting}>
+          <Button
+            variant="success"
+            type="submit"
+            form="addEditNoteForm"
+            disabled={isSubmitting}
+          >
             Save
           </Button>
         </Modal.Footer>

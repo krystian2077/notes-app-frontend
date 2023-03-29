@@ -24,7 +24,9 @@ export const NavBarLoggedInView = ({
   return (
     <>
       <Navbar.Text className="me-2">Signed in as {user.username}</Navbar.Text>
-      <Button onClick={logout}>Log out</Button>
+      <Button variant="success" onClick={logout}>
+        Log out
+      </Button>
     </>
   );
 };

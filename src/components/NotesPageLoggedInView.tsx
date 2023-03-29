@@ -61,7 +61,9 @@ export const NotesPageLoggedInView = () => {
   return (
     <>
       <Button
-        className={`mb-4 ${stylesUtils.blockCenter} ${stylesUtils.flexCenter}`}
+        size="lg"
+        variant="success"
+        className={`mb-5 mt-4 ${stylesUtils.blockCenter} ${stylesUtils.flexCenter}`}
         onClick={() => setShowAddNoteDialog(true)}
       >
         <FaPlus />

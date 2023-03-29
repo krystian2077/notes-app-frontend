@@ -66,6 +66,7 @@ export const LoginModal = ({
               error={errors.password}
             />
             <Button
+              variant="success"
               type="submit"
               disabled={isSubmitting}
               className={styleUtils.width100}
