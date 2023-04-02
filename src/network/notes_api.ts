@@ -25,7 +25,7 @@ async function fetchData(input: RequestInfo, init?: RequestInit) {
 }
 
 export async function getLoggedInUser(): Promise<User> {
-  const response = await fetchData("/api/users", { method: "GET" });
+  const response = await fetchData("https://notes-app-server-38vv.onrender.com/api/users", { method: "GET" });
   return response.json();
 }
 
@@ -36,7 +36,7 @@ export interface SignUpCredentials {
 }
 
 export async function signUp(credentials: SignUpCredentials): Promise<User> {
-  const response = await fetchData("/api/users/signup", {
+  const response = await fetchData("https://notes-app-server-38vv.onrender.com/api/users/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export interface LoginCredentials {
 }
 
 export async function login(credentials: LoginCredentials): Promise<User> {
-  const response = await fetchData("/api/users/login", {
+  const response = await fetchData("https://notes-app-server-38vv.onrender.com/api/users/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -63,11 +63,11 @@ export async function login(credentials: LoginCredentials): Promise<User> {
 }
 
 export async function logout() {
-  await fetchData("/api/users/logout", { method: "POST" });
+  await fetchData("https://notes-app-server-38vv.onrender.com/api/users/logout", { method: "POST" });
 }
 
 export async function fetchNotes(): Promise<Note[]> {
-  const response = await fetchData("/api/notes", { method: "GET" });
+  const response = await fetchData("https://notes-app-server-38vv.onrender.com/api/notes", { method: "GET" });
   return response.json();
 }
 
@@ -77,7 +77,7 @@ export interface NoteInput {
 }
 
 export async function createNote(note: NoteInput): Promise<Note> {
-  const response = await fetchData("/api/notes", {
+  const response = await fetchData("https://notes-app-server-38vv.onrender.com/api/notes", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -91,7 +91,7 @@ export async function updateNote(
   noteId: string,
   note: NoteInput
 ): Promise<Note> {
-  const response = await fetchData("/api/notes/" + noteId, {
+  const response = await fetchData("https://notes-app-server-38vv.onrender.com/api/notes/" + noteId, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -102,5 +102,5 @@ export async function updateNote(
 }
 
 export async function deleteNote(noteId: string) {
-  await fetchData("/api/notes/" + noteId, { method: "DELETE" });
+  await fetchData("https://notes-app-server-38vv.onrender.com/api/notes/" + noteId, { method: "DELETE" });
 }
