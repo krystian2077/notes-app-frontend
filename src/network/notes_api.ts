@@ -26,7 +26,7 @@ async function fetchData(input: RequestInfo, init?: RequestInit) {
 
 export async function getLoggedInUser(): Promise<User> {
   const response = await fetchData(
-    "https://notes-app-backend-dp7u.onrender.com/api/users/",
+    "/api/users/",
     { method: "GET" }
   );
   return response.json();
@@ -40,7 +40,7 @@ export interface SignUpCredentials {
 
 export async function signUp(credentials: SignUpCredentials): Promise<User> {
   const response = await fetchData(
-    "https://notes-app-backend-dp7u.onrender.com/api/users/signup",
+    "/api/users/signup",
     {
       method: "POST",
       headers: {
@@ -59,7 +59,7 @@ export interface LoginCredentials {
 
 export async function login(credentials: LoginCredentials): Promise<User> {
   const response = await fetchData(
-    "https://notes-app-backend-dp7u.onrender.com/api/users/login",
+    "/api/users/login",
     {
       method: "POST",
       headers: {
@@ -73,14 +73,14 @@ export async function login(credentials: LoginCredentials): Promise<User> {
 
 export async function logout() {
   await fetchData(
-    "https://notes-app-backend-dp7u.onrender.com/api/users/logout",
+    "/api/users/logout",
     { method: "POST" }
   );
 }
 
 export async function fetchNotes(): Promise<Note[]> {
   const response = await fetchData(
-    "https://notes-app-backend-dp7u.onrender.com/api/notes",
+    "/api/notes",
     { method: "GET" }
   );
   return response.json();
@@ -93,7 +93,7 @@ export interface NoteInput {
 
 export async function createNote(note: NoteInput): Promise<Note> {
   const response = await fetchData(
-    "https://notes-app-backend-dp7u.onrender.com/api/notes",
+    "/api/notes",
     {
       method: "POST",
       headers: {
@@ -110,7 +110,7 @@ export async function updateNote(
   note: NoteInput
 ): Promise<Note> {
   const response = await fetchData(
-    "https://notes-app-backend-dp7u.onrender.com/api/notes/" + noteId,
+    "/api/notes/" + noteId,
     {
       method: "PATCH",
       headers: {
@@ -124,7 +124,7 @@ export async function updateNote(
 
 export async function deleteNote(noteId: string) {
   await fetchData(
-    "https://notes-app-backend-dp7u.onrender.com/api/notes/" + noteId,
+    "/api/notes/" + noteId,
     { method: "DELETE" }
   );
 }
