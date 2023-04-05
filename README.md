@@ -64,7 +64,7 @@ Install the latest version of npm in your runtime.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/krystian2077/notes-app-backend.git
+   git clone https://github.com/krystian2077/notes-app-frontend.git
    ```
 3. Install NPM packages
    ```sh
@@ -72,7 +72,8 @@ Install the latest version of npm in your runtime.
    ```
 4. Run npm script
    ```sh
-   npm start nodemon src/server.ts
+   npm start react-scripts start
+
    ```
 
 
