@@ -27,6 +27,8 @@ Using My Notes App, we can easily add and quickly edit/delete our notes.
 
 We set up our own account so that our notes are always available to us.
 
+The application has validation and authorization of user registration/login.
+
 The application is fully responsive so we can use it on a phone or laptop.
 
 
@@ -64,7 +66,7 @@ Install the latest version of npm in your runtime.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/krystian2077/notes-app-backend.git
+   git clone https://github.com/krystian2077/notes-app-frontend.git
    ```
 3. Install NPM packages
    ```sh
@@ -72,7 +74,8 @@ Install the latest version of npm in your runtime.
    ```
 4. Run npm script
    ```sh
-   npm start nodemon src/server.ts
+   npm start react-scripts start
+
    ```
 
 
